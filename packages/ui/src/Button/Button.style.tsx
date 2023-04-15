@@ -40,7 +40,7 @@ export const ButtonTheme = defineStyleConfig({
   variants: {
     outline: {
       border: "2px solid",
-      borderColor: "primary.500",
+      borderColor: "primary.400",
       color: "primary.500",
     },
     solid: {

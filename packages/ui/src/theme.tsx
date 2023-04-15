@@ -4,6 +4,7 @@ import { ButtonTheme } from "./Button/Button.style";
 import { NavMenuTheme } from "./NavMenu/NavMenu.style";
 import { NavMenuItemTheme } from "./NavMenuItem/NavMenuItem.style";
 import { TextTheme } from "./Text/Text.style";
+import { CardTheme } from "./Card/Card.style";
 
 // We expose our custom theme, but the consumer can always extend it or override it
 export const defaultTheme = {
@@ -44,33 +45,23 @@ export const defaultTheme = {
       800: "#3b3687",
       900: "#32275d",
     },
-    components: {
-      Button: {
-        baseStyle: {
-          borderRadius: "lgs",
-        },
-      },
-    },
   },
 };
 
-// Adding only the components we're interested in to keep the bundle lighter.
-const {
-  // Button, // We're using our custom Button instead of Chakra's
-  Card,
-  Select,
-  Switch,
-} = chakraTheme.components;
+// Adding only the themes from Chakra's components that we're interested in to keep the bundle lighter
+const { Select, Switch, Heading } = chakraTheme.components;
 
-export const theme = extendBaseTheme({
-  ...defaultTheme,
+export const theme = extendBaseTheme(defaultTheme, {
   components: {
+    // These are components themes that we want to expose from Chakra unchanged.
+    Select,
+    Switch,
+    Heading,
+    // These are components themes that we want to expose from Chakra but we want to override or modify them.
     Button: ButtonTheme,
     NavMenu: NavMenuTheme,
     NavMenuItem: NavMenuItemTheme,
+    Card: CardTheme,
     Text: TextTheme,
-    Select,
-    Switch,
-    Card,
   },
 });

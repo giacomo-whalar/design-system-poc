@@ -27,6 +27,11 @@ export const overrides = {
       "900": "#072B2C",
     },
   },
+
+  /*
+   * For simplicity's sake, these component's overrides are declared here but they could be declared
+   * in their own components folder and use defineConfigStyle for better type safety
+   */
   components: {
     Button: {
       baseStyle: {
@@ -50,6 +55,11 @@ export const overrides = {
         p: "6",
         color: "secondary.500",
         textTransform: "uppercase",
+      },
+    },
+    Card: {
+      baseStyle: {
+        container: { boxShadow: "lg", borderRadius: "md" },
       },
     },
   },

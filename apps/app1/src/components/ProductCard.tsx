@@ -38,7 +38,7 @@ export function ProductCard(props: ProductCardProps) {
           <Button variant="solid" colorScheme="primary">
             Buy now
           </Button>
-          <Button variant="ghost" colorScheme="primary">
+          <Button variant="outline" colorScheme="secondary">
             Add to cart
           </Button>
         </ButtonGroup>
