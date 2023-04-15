@@ -2,13 +2,6 @@
   text-align: center;
 }
 
-.Turborepo {
-  font-size: 72px;
-  background: linear-gradient(to right, #0099f7, #f11712);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .App-header {
   background-color: #18181b;
@@ -18,9 +11,5 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
   color: white;
 }

@@ -1,34 +1,23 @@
-# Turborepo Create React App starter
+# Design System / Component Library Proof of Concept
 
-This is an official starter Turborepo.
+This monorepo contains 3 projects:
 
-## Using this example
+- `ui`
+- `app1`
+- `app2`
 
-Run the following command:
+`ui` is the component and styling library for our design system, it provides a default theme, custom components and also reexport Chakra in its entirety so we can abstract the implementation of the lib from the consumers.
 
-```sh
-npx create-turbo@latest -e with-create-react-app
-```
+`app1` is a basic mock app that consumes our UI lib and acts as an example for the different possibilities this system provides.
 
-## What's inside?
+`app2` is a more simple app simply to act as an example of how different apps might consume the same UI lib with different theming.
 
-This Turborepo includes the following packages/apps:
+## UI project
 
-### Apps and Packages
+There are several components included to illustrate the different ways of reusing, extending and overriding Chakra's components:
 
-- `docs`: a [create-react-app](https://create-react-app.dev) app
-- `web`: another [create-react-app](https://create-react-app.dev) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-plugin-react` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+`Text` is an example of a component that doesn't need to override or extend functionality, so we reexport Chakra's `Text` component directly without creating a new component ourselves. We simply provide a custom theme to customize the sizes and variants that can be used.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+`Button`. This is a component that is reexported from Chakra because we want to extend its functionality as well as its styles, so we create a Button component and also provide styling and custom variants via theming.
 
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
+`NavMenu` and `NavMenuItem`. These are fully custom components that don't exist in Chakra, but we can leverage Chakra's theme to add variants and sizing if necessary.
