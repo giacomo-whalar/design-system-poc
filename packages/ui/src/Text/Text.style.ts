@@ -6,6 +6,10 @@ interface ITextTheme {
   defaultProps?: any;
 }
 
+/* 
+  This is an example of a Chakra component of which we want to override its styles,
+  limiting sizes, variants, etc. So we simply override its theme.
+*/
 export const TextTheme: ITextTheme = defineStyleConfig({
   // Limit the number of sizes
   sizes: {

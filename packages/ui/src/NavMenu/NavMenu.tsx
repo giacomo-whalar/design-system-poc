@@ -5,6 +5,11 @@ interface NavMenuProps {
   children: React.ReactNode;
 }
 
+/* 
+  This and its Item are custom components that don't exist in Chakra,
+  but we can leverage Chakra utils to include our own variants, sizes, etc.
+  and style it 100% through our theme.
+*/
 export function NavMenu(props: NavMenuProps) {
   const styles = useStyleConfig("NavMenu");
 

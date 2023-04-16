@@ -2,11 +2,12 @@
 import { Button } from "./Button";
 import { NavMenu } from "./NavMenu";
 import { NavMenuItem } from "./NavMenuItem";
-import { Custom } from "./Custom";
+import { Square } from "./Square";
+import { Circle } from "./Circle";
 import { theme } from "./theme";
 
 // ...rexport Chakra's to have all utilities available through our UI lib
 export * from "@chakra-ui/react";
 
 // ...export our modules as overrides to avoid name clashing with Chakra's
-export { Button, NavMenu, NavMenuItem, Custom, theme };
+export { Button, NavMenu, NavMenuItem, Square, Circle, theme };

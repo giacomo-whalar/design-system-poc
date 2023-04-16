@@ -39,7 +39,7 @@ export const overrides = {
       },
       sizes: {
         md: {
-          px: "10",
+          px: "8",
         },
       },
     },

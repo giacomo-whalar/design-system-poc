@@ -10,7 +10,8 @@ import {
   Stack,
   NavMenu,
   NavMenuItem,
-  Custom,
+  Circle,
+  Square,
 } from "ui";
 import { ProductCard } from "./components/ProductCard";
 import { brandTheme } from "./brandTheme";
@@ -26,7 +27,8 @@ function App() {
       <Flex>
         <NavMenu>
           <NavMenuItem>
-            <Custom />
+            <Square />
+            <Circle />
           </NavMenuItem>
           <NavMenuItem variant="outline">
             <a href="#">Home</a>

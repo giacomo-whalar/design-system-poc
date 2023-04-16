@@ -1,5 +1,8 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 
+/*
+  This theme completely overrides Chakra's own Button's
+*/
 export const ButtonTheme = defineStyleConfig({
   baseStyle: {
     lineHeight: "1.2",
